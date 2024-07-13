@@ -1,0 +1,224 @@
+/* Continued CSS */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    color: #ffffff; /* Default text color to white */
+    background-image: url('https://www.keralatourism.org/images/keralacontent/2020/1/kerala-header.jpg'); /* Example tourism-related background image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: rgba(0, 102, 204, 0.7); /* Blue with transparency */
+    color: #ffffff; /* White text color for header */
+    padding: 20px;
+    text-align: center;
+    font-family: 'Arial', 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for better visibility */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2em;
+    color: #ffffff; /* White text color for h2 */
+    border-bottom: 2px solid #ff6600; /* Orange bottom border */
+    padding-bottom: 0.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for better visibility */
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ffffff; /* White text color for paragraphs */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for better visibility */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ffcc00; /* Yellow text color for links */
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for better visibility */
+}
+
+footer {
+    background-color: #ff6600; /* Orange background */
+    color: #ffffff; /* White text color for footer */
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for better visibility */
+}
+
+.instructions {
+    font-size: 0.9em;
+    color: #ffffff; /* White text color for instructions */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for better visibility */
+}
+
+.main-page {
+    background-size: cover;
+}
+
+.district-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.district-btn {
+    background-color: #008080; /* Teal background */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: #ffffff; /* White text color for district buttons */
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: inline-block; /* Ensures button behaves correctly */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for better visibility */
+}
+
+.district-btn.kollam,
+.district-btn.pathanamthitta,
+.district-btn.alappuzha,
+.district-btn.kottayam,
+.district-btn.ernakulam,
+.district-btn.thrissur,
+.district-btn.palakkad,
+.district-btn.wayanad,
+.district-btn.kannur,
+.district-btn.kasargod,
+.district-btn.idukki {
+    background-color: #ff0000; /* Red background */
+}
+
+.district-btn.kozhikode,
+.district-btn.trivandrum,
+.district-btn.malappuram {
+    background-color: #008080; /* Teal background for exceptions */
+}
+
+.district-btn.kollam a,
+.district-btn.pathanamthitta a,
+.district-btn.alappuzha a,
+.district-btn.kottayam a,
+.district-btn.ernakulam a,
+.district-btn.thrissur a,
+.district-btn.palakkad a,
+.district-btn.wayanad a,
+.district-btn.kannur a,
+.district-btn.kasargod a,
+.district-btn.idukki a {
+    color: #ffffff; /* White text color for links within red buttons */
+}
+.district-btn.trivandrum a,
+.district-btn.kozhikode a,
+.district-btn.malappuram a {
+    color: #ffffff; /* White text color for links within teal buttons */
+}
+
+.district-btn:hover {
+    background-color: #004d40; /* Darker teal on hover for default buttons */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.district-btn.trivandrum:hover,
+.district-btn.kollam:hover,
+.district-btn.pathanamthitta:hover,
+.district-btn.alappuzha:hover,
+.district-btn.kottayam:hover,
+.district-btn.ernakulam:hover,
+.district-btn.thrissur:hover,
+.district-btn.palakkad:hover,
+.district-btn.wayanad:hover,
+.district-btn.kannur:hover,
+.district-btn.kasargod:hover,
+.district-btn.idukki:hover {
+    background-color: #cc0000; /* Darker red on hover for red buttons */
+}
+
+.district-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.district-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0) 80%);
+    transition: all 0.6s;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.5;
+    z-index: 0; /* Ensure this is behind the link */
+}
+
+.image-gallery {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 0 10px;
+}
+
+.image-gallery h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff; /* White text color for gallery headings */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for better visibility */
+}
+
+.image-item {
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 4px solid #008080; /* Teal border */
+}
+
+.image-description {
+    padding: 15px;
+    background-color: #ffcc00; /* Yellow background for image descriptions */
+    color: #333333; /* Dark text color for image descriptions */
+    text-shadow: none; /* No text shadow needed for dark text on light background */
+}
+
+.image-description h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.image-description p {
+    margin: 10px 0 0;
+}
